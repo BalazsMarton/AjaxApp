@@ -1,0 +1,5 @@
+$("#myModal").modal('toggle');
+$(".post_title").val('');
+$(".post_content").val('');
+$("#container_posts").prepend('<%= j render @post %>');
+$("#post_<%= @post.id %>").toggle().fadeIn(1000);
