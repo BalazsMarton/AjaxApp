@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="table-responsive">
+      <table class="table table-hover table-striped" >
+      <thead>
+      <tr>
+        <th>jarat</th>
+        <th>honnan</th>
+        <th>hova</th>
+        <th>indul</th>
+        <th>erkezik</th>
+      </tr>
+      </thead>
+      <tbody>
+  <% @menetrends.each do |menetrend| %>
+        
+      <tr>
+      <td><%= menetrend.jarat %></td>
+        <td><%= menetrend.honnan %></td>
+        <td><%= menetrend.hova %></td>
+        <td><%= menetrend.indul %></td>
+        <td><%= menetrend.erkezik %></td>
+      </tr>
+    <% end %>
+    </tbody>
+</table>
+  </div>
+</div>

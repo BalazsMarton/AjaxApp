@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004000519) do
+ActiveRecord::Schema.define(version: 20161005014353) do
+
+  create_table "menetrends", id: false, force: :cascade do |t|
+    t.string "jarat",   limit: 255
+    t.string "honnan",  limit: 255
+    t.string "hova",    limit: 255
+    t.string "indul",   limit: 255
+    t.string "erkezik", limit: 255
+  end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",      limit: 255
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
